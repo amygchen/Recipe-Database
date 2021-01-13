@@ -23,5 +23,5 @@ SELECT recipeName
 FROM GeneralRecipe INNER JOIN 
     (Ingredients INNER JOIN GeneralRecipeHasIngredients ON Ingredients.ID = GeneralRecipeHasIngredients.ingredientsID) ON GeneralRecipe.ID = GeneralRecipeHasIngredients.generalRecipeID
 GROUP BY recipeName
-HAVING MAX(dairy = FALSE) AND 	MAX(meat = FALSE) AND 	MAX(ingredientName 	NOT LIKE 	'egg');
+HAVING MAX(dairy = FALSE) AND MAX(meat = FALSE) AND MAX(ingredientName 	NOT LIKE 'egg');
 ```
